@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" 
+				content="width=device-width, initial-scale= 1.0">
+				
+				<title>Mathematical Equations</title>
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+				<link rel="stylesheet" type="text/css" href="equation.css">
+	</head>
+	<body>
+		<div class="container">
+		  
+			<header>
+			  <span style="font-size:25px;"><a href="index.html"><i class="fa fa-arrow-left"></i></a></span>&nbsp;&nbsp;Mathematical Equations
+			 </header>
+			
+			
+			
+			<div class="div">
+				<div class="heading">QUADRATIC EQUATION</div>
+				<form>
+				  <div style="font-size:20px;">
+				    <span>Eqn <i class="fa fa-arrow-right"></i>&nbsp;&nbsp; ax² + bx + c = 0</span>
+				    
+				  </div>
+				  
+				  <div style="background:#222; color:white; padding:5px; font-size:15px;">
+				    <span style="font-size:20px;"><input type="number" id="aa" oninput="a.value=value">x² + <input type="number" id="bb" oninput="b.value=value">x + <input type="number" id="cc" oninput="c.value=value"> = 0</span>
+				    <span>a = <input type="number" id="a" readonly>&nbsp; b = <input type="number" id="b" readonly>&nbsp; c = <input type="number" id="c" readonly></span>
+				    <br><br><br><br>
+				    <span>Answers: &nbsp;&nbsp; x<sub>1</sub> = <input type="number" id="q1" readonly>&nbsp;&nbsp;&nbsp; x<sub>2</sub> = <input type="number" id="q2" readonly></span>
+				  </div>
+				
+				
+				<div id="solve1">Solve</div>
+				<div id="show">Show workings</div>
+				<button type="reset">Reset</button>
+				</form>
+			</div>
+			
+			
+			<div class="div">
+				<div class="heading">SIMULTANEOUS EQUATIONS</div>
+				
+				  <div>
+				    <select id="simul">
+				    <option value="" selected disabled>select no of equations</option>
+				    <option value="2">2</option>
+				    <option value="3">3</option>
+				  </select>
+				  <div id="select1">Select</div>
+				 </div>
+				 
+				 <form>
+				 <div style="background-color: #222; color:white; padding:5px 2px 5px 2px; margin-top:10px; margin-bottom:10px;" id="simul2">
+				   <span style="font-size:20px">
+				     Eqn 1: &nbsp;<input type="number" id="x1">x + <input type="number" id="y1">y = <input type="number" id="z1"><br><br>
+				     Eqn 2: &nbsp;<input type="number" id="x2">x + <input type="number" id="y2">y = <input type="number" id="z2"><br><br>
+				     Answers: &nbsp;&nbsp;x = <input type="number" id="a2a" readonly> &nbsp; y = <input type="number" id="b2b" readonly>
+				    </span>
+				  </div>
+				    
+				  <div style="background-color: #222; color:white; padding:5px 2px 5px 2px; margin-top:10px; margin-bottom:10px;" id="simul3">
+				    <span style="font-size:20px">
+				     <input type="number" id="a1">x + <input type="number" id="b1">y + <input type="number" id="c1">z = <input type="number" id="d1"><br><br>
+				     <input type="number" id="a2">x + <input type="number" id="b2">y + <input type="number" id="c2">z = <input type="number" id="d2"><br><br>
+				     <input type="number" id="a3">x + <input type="number" id="b3">y + <input type="number" id="c3">z = <input type="number" id="d3"><br><br>
+				     
+				     Ans: x = <input type="number" id="3a" readonly> y = <input type="number" id="3b" readonly> z = <input type="number" id="3c" readonly>
+				    </span>
+				 </div>
+				
+				<div>
+				<div id="solve2">Solve</div>
+				<div id="show">Show workings</div>
+				<button type="reset">Reset</button>
+				</div>
+				</form>
+			</div>
+			
+			
+			
+			<div class="div">
+				<div class="heading">EQUATIONS OF MOTION</div>
+				<div style="font-size:20px; justify-content: flex-start;">
+				  <span>EQN 1:&nbsp; v = u + at</span>
+				  <br>
+				  <span>EQN 2:&nbsp; v² = u² + 2as</span>
+				  <br>
+				  <span>EQN 3:&nbsp; s = ut + ½at²</span>
+				  <br>
+				  <span>EQN 4:&nbsp; s = ½(v + u) × t</span>
+				</div>
+				<form>
+				  
+				  
+				
+				
+				<div id="solve3">Solve</div>
+				<div id="show">Show workings</div>
+				<button type="reset">Reset</button>
+				</form>
+			</div>
+			
+			
+			
+			
+			
+			
+		</div>
+		
+		
+		<script type="text/javascript" src="equation.js"></script>
+	</body>

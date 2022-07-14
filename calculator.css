@@ -1,0 +1,159 @@
+* {
+	box-sizing: border-box;
+	border:0;
+}
+body {
+	margin:0;
+	padding:0;
+}
+.container {
+	width:100vw;
+	height:100vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	padding:5px;
+	padding-bottom:10px;
+	background: #333;
+	margin:0 auto;
+}
+.container div {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .title {
+	height:20px;
+	font-family: Times New Roman;
+	letter-spacing:3px;
+	text-align:center;
+	font-size:15px;
+	padding:0;
+	background:#333;
+	color:white;
+}
+.display {
+  height: 80px;
+}
+.display .dis{
+  height:40px;
+  position:relative;
+  width:100%;
+}
+#zero, #step {
+	border:1px solid white;
+	padding:5px;
+	color: black;
+	height:100%;
+	width:100%;
+	overflow:scroll;
+	user-select:none;
+	background:white;
+}
+#zero {
+  text-align: right;
+  font-size: 1.7em;
+}
+#step {
+  text-align:left;
+  font-size: 1.7em;
+}
+button {
+	user-select:none;
+	padding:0;
+	text-align: center;
+	width: 45px;
+	height: 35px;
+	margin:auto;
+	border-radius:5px;
+	border:2px outset black;
+	outline:none;
+	background: #222;
+	color:white;
+	font-size:12px;
+	font-weight: bold;
+	-webkit-transition-duration:.5s;
+	transition-duration:.5s;
+}	
+button a {
+  color: white;
+  text-decoration: none;
+}
+.number button {
+  width: 55px;
+  height: 40px;
+  font-size: 20px;
+}
+#c {
+  background:red;
+}
+
+footer {
+	width:100%;
+	background:black;
+	text-align: center;
+	color: rgb(255,255,255);
+	font-size:15px;
+}
+
+
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y:scroll;
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu buttons */
+.sidenav .const {
+  padding: 5px;
+  display:block;
+  width:100%;
+  height:fit-content;
+  font-size: 16px;
+  text-align:left;
+  color: white;
+  background:black;
+  outline:none;
+  border-bottom:1px solid white;
+  -webkit-transition-duration:.5s;
+  transition-duration: 0.5s;
+}
+
+.sidenav #hd {
+	color:white;
+	position:absolute;
+	top:18px;
+	left:10px;
+	font-size:30px;
+}
+
+/* When you mouse over the navigation buttons, change their color */
+.sidenav .const:hover {
+  background:gray;
+}
+.sidenav .conv:hover {
+  background:gray;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}

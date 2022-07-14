@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" 
+				content="width=device-width, initial-scale= 1.0">
+				
+				<title>Scientific Calculator</title>
+				
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+				<link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+	
+	<div id="mySidenav" class="sidenav">
+		<div id="hd">CONSTANTS</div>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-times"></i></a>
+ 
+ <button class="const" style="background-color:white; position:sticky; top:-60px; left:0;"><span style="font-size:20px; font-weight:bold; color:black">UNIVERSAL CONSTANTS</span></button>
+  <button class="const" id="atm">Atmospheric pressure (mmHg)<br><span style="font-size:13px; color:gray;">760mmHg = 1.01×10^5 Nm-²</span></button>
+  <button class="const" id="g">Acceleration due to gravity<br><span style="font-size:13px; color:gray;">g = 9.80665 ms-²</span>
+  </button>
+  <button class="const" id="G">Gravitational Constant (G)<br><span style="font-size:13px; color:gray;">G = 6.67384×10-¹¹kg-¹m³s-²</span></button>
+  <button class="const" id="h">Planck Constant (h)<br><span style="font-size:13px; color:gray;">h = 6.62607×10-³⁴Js</span></button>
+  <button class="const" id="C">Speed of Light (c)<br><span style="font-size:13px; color:gray;">C = 2.99792×10^8ms-¹</span></button>
+  <button class="const" id="uo">Permeability of Vaccum (U<sub>o</sub>)<br><span style="font-size:13px; color:gray;">U<sub>o</sub> = 12.56637×10^-7Hm-¹</span></button>
+  <button class="const" id="eo">Permittivity of Vaccum (E<sub>o</sub>)<br><span style="font-size:13px; color:gray;">E<sub>o</sub> = 8.85419×10-¹²F/m</span></button>
+  <button class="const" id="e">Elementary Charge (e)<br><span style="font-size:13px; color:gray;">e = 1.60218×10^-19C</span></button>
+  <button class="const" id="k">Boltzmann Constant (k)<br><span style="font-size:13px; color:gray;">k = 1.38065×10-²³J/K</span></button>
+  <button class="const" id="mp">Planck Mass (Mp)<br><span style="font-size:13px; color:gray;">Mp = 2.17651×10^-8kg</span></button>
+  <button class="const" id="tp">Planck Time (tp)<br><span style="font-size:13px; color:gray;">tp = 5.39106×10^-44s</span></button>
+  <button class="const" id="lp">Planck Length (lp)<br><span style="font-size:13px; color:gray;">lp = 1.61620×10^-35m</span></button>
+  <button class="const" id="Tp">Planck Temperature (Tp)<br><span style="font-size:13px; color:gray;">Tp = 1.41683×10³²K</span></button>
+  <button class="const" id="n">Avogadro Number (n)<br><span style="font-size:13px; color:gray;">n = 6.023×10²³count/mol</span></button>
+  
+  <button class="const" style="background-color:white; position:sticky; top:-60px; left:0;"><span style="font-size:20px; font-weight:bold; color:black">PHYSICO-CHEMICAL CONSTANTS</span></button>
+  <button class="const" id="u">Atomic mass (u)<br><span style="font-size:13px; color:gray;">u = 1.660539×10^-27kg</span></button>
+  <button class="const" id="carbon">Molar Mass of <sup>12</sup>C<br><span style="font-size:13px; color:gray;"><sup>12</sup>C = 12×10-³kg</span></button>
+  <button class="const" id="molar">Molar Mass Constant<br><span style="font-size:13px; color:gray;">1.0×10-³kg/mol</span></button>
+  <button class="const" id="electron">Electron Molar Mass<br><span style="font-size:13px; color:gray;">5.485799×10^-7kg/mol</span></button>
+  <button class="const" id="F">Faraday Constant (F)<br><span style="font-size:13px; color:gray;">F = 9.64853×10⁴C/mol</span></button>
+  <button class="const" id="R">Molar Gas Constant (R)<br><span style="font-size:13px; color:gray;">R = 8.31446J/K•mol</span></button>
+  <button class="const" id="vm">Molar Volume of Ideal Gas (Vm)<br><span style="font-size:13px; color:gray;">Vm = 22.41397×10-³m³/mol</span></button>
+  
+  <button class="const" style="background-color:white; position:sticky; top:-60px; left:0;"><span style="font-size:20px; font-weight:bold; color:black">ATOMIC & NUCLEAR PHYSICS CONSTANTS</span></button>
+  <button class="const" id="ry">Rydberg Constant (Ry)<br><span style="font-size:13px; color:gray;">Ry = 1.097373×10^7m-¹</span></button>
+  <button class="const" id="br">Bohr Radius (r<sub>B</sub>)<br><span style="font-size:13px; color:gray;">r<sub>B</sub> = 5.291772×10-¹¹m</span></button>
+  <button class="const" id="ub">Bohr Magneton (u<sub>B</sub>)<br><span style="font-size:13px; color:gray;">u<sub>B</sub> = 9.274010×10-²⁴J/T</span></button>
+  <button class="const" id="fe">Fermi Coupling<br><span style="font-size:13px; color:gray;">1.16636×10⁴eV-²<br>3.670336×10^48kg-²</span></button>
+
+
+
+
+</div>
+
+
+
+	
+	
+	<div class="container">
+	  
+	  
+		<div class="title">
+				Scientific Calculator
+		</div>
+		
+		<!-- for display -->
+		<div class="display">
+		  
+		  <div class="dis">
+		    <input type="text" id="step" minlength="1" maxlength="20" placeholder="0">
+		  </div>
+		  
+		  <div class="dis">
+		    <input type="text" id="zero" minlength="1" maxlength="20" readonly>
+		  </div>
+		  
+		</div>
+		
+		
+		
+		<div class="operation">
+		  
+		  <button id="eqn"><a href="equation.html">EQN</a></button>
+		  <button id="conv"><a href="conv.html">CONV</a></button>
+		  <button id="const" onclick="openNav()">CNST</button>
+		  <button id="per">nPr</button>
+		  <button id="com">nCr</button>
+		  <button id="c">AC</button>
+		  
+		</div>
+		
+		
+		
+		<div class="operation">
+		  
+		  <button id="graph">GRA</button>
+		  <button id="fac" class="fff">X!</button>
+		  <button id="sin" class="fff">sin</button>
+		  <button id="cos" class="fff">cos</button>
+		  <button id="tan" class="fff">tan</button>
+		  <button id="bin" class="fff">BIN</button>
+		  
+		</div>
+		
+		
+		
+		<div class="operation">
+		  
+		  <button class="fff" value="**">x<sup>n</sup></button>
+		  <button id="cbrt">³√</button>
+		  <button id="cube">x³</button>
+		  <button id="in">1/x</button>
+		  <button id="sqroot">√</button>
+			<button id="square">x²</button>
+		  
+		</div>
+		
+		
+		
+		<div class="operation">
+		  
+		  <button id="alog">10<sup>x</sup></button>
+		  <button id="log">log</button>
+		  <button id="ln">ln</button>
+		  <button id="e">e<sup>x</sup></button>
+		  <button id="rad">rad</button>
+		  <button id="pi">π</button>
+		  
+		</div>
+		
+		
+		
+		<div class="operation">
+		  
+		  <button id="">MAT</button>
+		  <button id="">VCT</button>
+		  <button id="">DET</button>
+		  <button class="but" value="(">(</button>
+		  <button class="but" value=")">)</button>
+		  <button id="">OFF</button>
+		  
+		</div>
+		
+		
+		
+		<div class="number">
+		  
+		  <button class="but" value="7">7</button>
+		  <button class="but" value="8">8</button>
+		  <button class="but" value="9">9</button>
+		  <button class="fff" value="%">MOD</button>
+		  <button id="del">DEL</button>
+		  
+		</div>
+		
+		
+		
+		<div class="number">
+		  
+		  <button class="but" value="4">4</button>
+		  <button class="but" value="5">5</button>
+		  <button class="but" value="6">6</button>
+		  <button class="fff" value="*">×</button>
+		  <button class="fff" value="/">÷</button>
+		  
+		</div>
+		
+		
+		
+		<div class="number">
+		  
+		  <button class="but" value="1">1</button>
+		  <button class="but" value="2">2</button>
+		  <button class="but" value="3">3</button>
+		  <button class="fff" value="+">+</button>
+		  <button class="fff" value="-">-</button>
+		  
+		</div>
+		
+		
+		
+		<div class="number">
+		  
+		  <button class="but" value="0">0</button>
+		  <button class="but" value=".">.</button>
+		  <button id="rnd">Rnd</button>
+		  <button id="ans" class="but">ANS</button>
+		  <button id="equal">=</button>
+		  
+		</div>						
+											
+
+	</div>
+	
+	
+				<script type="text/javascript" src="calculator.js"></script>
+</body>
+</html>
