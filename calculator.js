@@ -84,7 +84,7 @@ var radians = document.getElementById('rad');
 radians.onclick= function(){output.value = (step.value * Math.PI) / 180};
 
 var sine = document.getElementById('sin');
-sine.addEventListener('click', function(){output.value = Math.sin((num * Math.PI) /180);});
+sine.addEventListener('click', function(){output.value = Math.sin((step.value * Math.PI) /180);});
 
 var cosine = document.getElementById('cos');
 cosine.addEventListener('click', function(){output.value = Math.cos((step.value * Math.PI) /180)});
